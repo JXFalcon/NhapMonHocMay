@@ -1,0 +1,63 @@
+{
+  "feature_cols": [
+    "national_inv",
+    "lead_time",
+    "in_transit_qty",
+    "forecast_3_month",
+    "forecast_6_month",
+    "forecast_9_month",
+    "sales_1_month",
+    "sales_3_month",
+    "sales_6_month",
+    "sales_9_month",
+    "min_bank",
+    "potential_issue",
+    "pieces_past_due",
+    "perf_6_month_avg",
+    "perf_12_month_avg",
+    "local_bo_qty",
+    "deck_risk",
+    "oe_constraint",
+    "ppap_risk",
+    "stop_auto_buy",
+    "rev_stop"
+  ],
+  "target": "went_on_backorder",
+  "id_col": "sku",
+  "split_col": "Validation",
+  "sentinel_cols": [
+    "perf_6_month_avg",
+    "perf_12_month_avg"
+  ],
+  "selected_model_key": "A_FeatureEngineering__RandomForest",
+  "latent_dim": 8,
+  "thresholds": {
+    "default": 0.5,
+    "f1_best": 0.4181937780887763,
+    "recall_80": 0.36114210041303835,
+    "selection_note": "F1/Recall thresholds surveyed using Validation split in clu.zip; reassess on independent data before production."
+  },
+  "default_values": {
+    "national_inv": 11.0,
+    "lead_time": 8.0,
+    "in_transit_qty": 0.0,
+    "forecast_3_month": 0.0,
+    "forecast_6_month": 0.0,
+    "forecast_9_month": 0.0,
+    "sales_1_month": 0.0,
+    "sales_3_month": 1.0,
+    "sales_6_month": 3.0,
+    "sales_9_month": 5.0,
+    "min_bank": 0.0,
+    "potential_issue": 0.0,
+    "pieces_past_due": 0.0,
+    "perf_6_month_avg": 0.85,
+    "perf_12_month_avg": 0.83,
+    "local_bo_qty": 0.0,
+    "deck_risk": 0.0,
+    "oe_constraint": 0.0,
+    "ppap_risk": 0.0,
+    "stop_auto_buy": 1.0,
+    "rev_stop": 0.0
+  }
+}
